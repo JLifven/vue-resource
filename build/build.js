@@ -9,6 +9,7 @@ const replace = require('rollup-plugin-replace');
 const {name, version, homepage} = require('../package.json');
 const banner = `/*!\n * ${name} v${version}\n * ${homepage}\n * Released under the MIT License.\n */\n`;
 
+
 rollup.rollup({
     input: 'src/index.js',
     plugins: [babel(), replace({__VERSION__: version})]
